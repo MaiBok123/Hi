@@ -17,8 +17,7 @@ function toggleContent(id, week) {
 // ฟังก์ชัน unlockWeek และ lockWeek ถูกเรียกในตอนท้ายของ script.js เพื่อปลดล็อกและล็อกสัปดาห์ตามที่ต้องการ
 unlockWeek(1);
 unlockWeek(2);
-
-lockWeek(3);
+unlockWeek(3);
 lockWeek(4);
 
 function unlockWeek(week) {
