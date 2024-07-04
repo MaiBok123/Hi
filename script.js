@@ -35,5 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
     shuffleText(textElement, finalText);
 
     const soundEffect = document.getElementById('soundEffect');
+    document.querySelector('header').addEventListener('mouseover', function() {
+        soundEffect.play();
+    });
+});
+document.addEventListener('DOMContentLoaded', (event) => {
+    const soundEffect = document.getElementById('soundEffect');
     soundEffect.play();
 });
