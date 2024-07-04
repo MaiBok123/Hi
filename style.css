@@ -4,21 +4,25 @@ body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    background: linear-gradient(135deg, 
+        #ff9a9e 0%, 
+        #fad0c4 20%, 
+        #a1c4fd 40%, 
+        #c2e9fb 60%, 
+        #667eea 80%, 
+        #764ba2 100%);
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    animation: backgroundAnimation 10s infinite alternate;
-    transition: background-color 0.5s ease-in-out; /* Smooth transition */
+    animation: backgroundAnimation 10s linear infinite alternate;
 }
 
 @keyframes backgroundAnimation {
     0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 header {
@@ -29,13 +33,13 @@ header {
     text-align: center;
     max-width: 600px;
     animation: headerAnimation 2s ease-out;
-    transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s; /* Smooth transitions */
+    transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
 }
 
 header:hover {
     transform: scale(1.05);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-    background-color: rgba(255, 255, 255, 0.9); /* Lighten background color on hover */
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 h1 {
@@ -47,7 +51,7 @@ h1 {
     white-space: nowrap;
     border-right: 0.15em solid #ff6f61;
     animation: caret 0.75s step-end infinite;
-    transition: color 0.3s ease-in-out; /* Smooth transition for text color */
+    transition: color 0.3s ease-in-out;
 }
 
 @keyframes caret {
