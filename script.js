@@ -35,5 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
     shuffleText(textElement, finalText);
 
     const soundEffect = document.getElementById('soundEffect');
-    soundEffect.play();
+    
+    // เพิ่มการจัดการเหตุการณ์คลิกเพื่อเล่นเสียง
+    document.querySelector('header').addEventListener('click', function() {
+        // ตรวจสอบว่าเสียงกำลังไม่เล่นอยู่
+        if (soundEffect.paused) {
+            soundEffect.play(); // เล่นเสียง
+        }
+    });
 });
