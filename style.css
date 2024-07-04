@@ -4,13 +4,7 @@ body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, 
-        #ff9a9e 0%, 
-        #fad0c4 20%, 
-        #a1c4fd 40%, 
-        #c2e9fb 60%, 
-        #667eea 80%, 
-        #764ba2 100%);
+    background: #e0bbdb; /* สีพื้นหลังเริ่มต้น */
     color: #333;
     display: flex;
     justify-content: center;
@@ -21,13 +15,10 @@ body {
 }
 
 @keyframes backgroundAnimation {
-    0% { background-color: rgb(255, 0, 0); } /* สีแดง */
-    16.7% { background-color: rgb(255, 255, 0); } /* สีเหลือง */
-    33.3% { background-color: rgb(0, 255, 0); } /* สีเขียว */
-    50% { background-color: rgb(0, 255, 255); } /* สีฟ้า */
-    66.7% { background-color: rgb(0, 0, 255); } /* สีน้ำเงิน */
-    83.3% { background-color: rgb(255, 0, 255); } /* สีม่วง */
-    100% { background-color: rgb(255, 0, 0); } /* สีแดง */
+    0%, 20% { background-color: #e0bbdb; } /* สีเริ่มต้น */
+    40% { background-color: #c2e9fb; } /* สีเขียว */
+    60% { background-color: #f0f8ff; } /* สีส้ม */
+    80%, 100% { background-color: #ffb6c1; } /* สีแดง */
 }
 
 header {
