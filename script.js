@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const textElement = document.getElementById('shuffled-text');
     const finalText = textElement.innerText;
     let interval;
+    const duration = 10000; // 10 seconds
+    const frameRate = 30; // 30 frames per second
+    const totalFrames = duration / frameRate;
 
     function getRandomChar() {
         const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -25,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 clearInterval(interval);
             }
 
-            iteration += 1 / 3;
-        }, 30);
+            iteration += text.length / totalFrames;
+        }, frameRate);
     }
 
     shuffleText(textElement, finalText);
