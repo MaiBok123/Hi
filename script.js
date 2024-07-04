@@ -39,3 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         soundEffect.play();
     });
 });
+document.addEventListener('DOMContentLoaded', (event) => {
+    const soundEffect = document.getElementById('soundEffect');
+    soundEffect.play();
+});
