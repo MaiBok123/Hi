@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalFrames = duration / frameRate;
 
     function getRandomChar() {
-        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const chars = 'ภถคตจขชพรนยบลฟหกดสวงฃผปอทมฝฎฑธณญฐฤฆฏฌษศซฅฉฮฒฬ';
         return chars[Math.floor(Math.random() * chars.length)];
     }
 
