@@ -30,7 +30,8 @@ h1 {
     text-shadow: none; /* Removed text-shadow for a cleaner look */
     border-right: none; /* Removed caret animation */
 }
-
+#per {
+      color: gold;
 h2 {
     margin: 10px 0 0;
     font-size: 1.3em; /* Slightly smaller font size */
