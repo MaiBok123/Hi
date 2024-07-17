@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function typeText() {
         if (index < finalText.length) {
-            textElement.innerText += finalText[index] === ' ' ? ' ' : finalText[index];
+            textElement.innerText += finalText[index];
             index++;
             setTimeout(typeText, typingSpeed);
         }
