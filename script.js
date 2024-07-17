@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const textElement = document.getElementById('shuffled-text');
     const finalText = textElement.innerText;
-    let interval;
     const duration = 10000; // 10 seconds
     const frameRate = 30; // 30 frames per second
     const totalFrames = duration / frameRate;
+    let interval;
 
     function getRandomChar() {
         const chars = 'ภถคตจขชพรนยบลฟหกดสวงฃผปอทมฝฎฑธณญฐฤฆฏฌษศซฅฉฮฒฬ';
@@ -16,12 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         interval = setInterval(() => {
             element.innerText = text
                 .split('')
-                .map((char, index) => {
-                    if (index < iteration) {
-                        return text[index];
-                    }
-                    return getRandomChar();
-                })
+                .map((char, index) => (index < iteration ? text[index] : getRandomChar()))
                 .join('');
 
             if (iteration >= text.length) {
@@ -38,8 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('header').addEventListener('mouseover', function() {
         soundEffect.play();
     });
-});
-document.addEventListener('DOMContentLoaded', (event) => {
-    const soundEffect = document.getElementById('soundEffect');
+
     soundEffect.play();
 });
